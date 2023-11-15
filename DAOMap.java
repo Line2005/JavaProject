@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 /**
- * @author Laetitia
+ * @author NGANDO DAVID LANCE
  *
  */
 public class DAOMap {
