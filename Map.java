@@ -17,7 +17,7 @@ import java.util.Observable;
 /**
  * <h1>The Map Class.</h1>
  *
- * @author Laetitia
+ * @author NGANDO DAVID LANCE
  * @version 0.1
  */
 
