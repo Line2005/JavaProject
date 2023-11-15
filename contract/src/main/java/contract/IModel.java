@@ -8,7 +8,7 @@ import entity.HelloWorld;
 /**
  * The Interface IModel.
  *
- * @author Jean-Aymeric Diet
+ * @author Benje Bassal
  */
 public interface IModel {
 
