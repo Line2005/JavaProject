@@ -5,7 +5,7 @@ import fr.exia.showboard.BoardFrame;
 /**
  * The Interface IView.
  *
- * @author Jean-Aymeric Diet
+ * @author Benje Bassal
  */
 public interface IView {
 
