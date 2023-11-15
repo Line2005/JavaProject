@@ -14,7 +14,7 @@ import contract.IModel;
 /**
  * The Class ViewFrame.
  *
- * @author Jean-Aymeric Diet
+ * @author NGUINSOM SOWE Daniela Nancy
  */
 class ViewFrame extends JFrame  {
 

@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 /**
  * The Class ViewPanel.
  *
- * @author Jean-Aymeric Diet
+ * @author NGUINSOM SOWE Daniela Nancy
  */
 class ViewPanel extends JPanel  {
 

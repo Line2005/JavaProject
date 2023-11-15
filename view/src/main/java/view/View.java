@@ -18,7 +18,7 @@ import entity.element.mobile.IMobile;
 /**
  * The Class View.
  *
- * @author Arthur Caldeireiro based on the work of Jean-Aymeric Diet
+ * @author NGUINSOM SOWE Daniela Nancy
  */
 public final class View extends Observable implements IView, KeyListener {
 
