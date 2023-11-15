@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * @author Laetitia
+ * @author NGANDO DAVID LANCE
  *
  */
 public class DBConnection {
