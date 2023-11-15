@@ -10,7 +10,7 @@ import entity.mobile.MyPlayer;
 /**
  * <h1>The Class BoulderDashModel.</h1>
  *
- * @author Laetitia
+ * @author NGANDO DAVID LANCE
  *
  */
 /**
