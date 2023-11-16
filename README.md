@@ -1,3 +1,3 @@
 # JavaProject
 Java Project
-The aim of this project was to craete an ancient game Boulder Dash.
+The aim of this project was to create an ancient game Boulder Dash.
