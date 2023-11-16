@@ -18,7 +18,7 @@ import entity.element.mobile.IMobile;
 /**
  * The Class View.
  *
- * @author NGUINSOM SOWE Daniela Nancy
+ * @author Daniela and Edwin
  */
 public final class View extends Observable implements IView, KeyListener {
 
@@ -182,6 +182,7 @@ public final class View extends Observable implements IView, KeyListener {
 	private IMap getmap() {
 		return this.map;
 	}
+
 
 	/**
 	 * Display the map
