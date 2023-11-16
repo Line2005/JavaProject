@@ -1,32 +1,21 @@
 package contract;
 
-import entity.IMap;
-import entity.mobile.IMobile;
-
-import entity.HelloWorld;
+import entity.element.IMap;
+import entity.element.mobile.IMobile;
 
 /**
  * The Interface IModel.
  *
- * @author Benje Bassal
+ * @author Aurelie
  */
 public interface IModel {
-
-	
-	 
-	
 	/**
-	 * Load the message.
-	 *
-	 * @param code
-	 *          the code
+	 * @return
 	 */
-	 IMap getMap();
+	IMap getMap();
 
 	/**
-	 * Gets the observable.
-	 *
-	 * @return the observable
+	 * @return
 	 */
-	 IMobile getMyPlayer();
+	IMobile getMyPlayer();
 }

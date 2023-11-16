@@ -1,27 +1,23 @@
 package contract;
 
+//import fr.exia.showboard.BoardFrame;
 
 import fr.exia.showboard.BoardFrame;
+
+import javax.swing.*;
+
 /**
  * The Interface IView.
  *
- * @author Benje Bassal
+ * @author Aurelie
  */
 public interface IView {
 
-	/**
-	 * Prints the message.
-	 *
-	 * @param message
-	 *          the message
-	 */
-void displayMessage(final String message);
-	
-	public void followMyPlayer();
+	void displayMessage(final String message);
 
-	public void updateView();
-	
-	
+	void followMyPlayer();
+
+	void updateView();
 
 	BoardFrame getBoardFrame();
 }
