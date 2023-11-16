@@ -8,8 +8,7 @@ import java.io.IOException;
 /**
  * <h1>The Sprite Class.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Tyreel
  */
 public class Sprite {
 
@@ -64,7 +63,18 @@ public class Sprite {
      *             Signals that an I/O exception has occurred.
      */
     public final void loadImage() throws IOException {
-        this.setImage(ImageIO.read(new File("sprites\\" + this.getImageName())));
+        File imageFile = new File("sprites\\" + this.getImageName());
+        if (imageFile.exists()) {
+            try {
+                this.setImage(ImageIO.read(imageFile));
+                this.setImageLoaded(true);
+            } catch (IOException e) {
+                e.printStackTrace();
+                this.setImageLoaded(false);
+            }
+        } else {
+            this.setImageLoaded(false);
+        }
     }
 
     /**

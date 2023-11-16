@@ -1,11 +1,14 @@
 package entity.element;
 
-import fr.exia.showboard.*;
+//import fr.exia.showboard.*;
+
+
+import fr.exia.showboard.ISquare;
 
 import javax.swing.*;
 import java.awt.*;
 
-public interface IElement extends ISquare{
+public interface IElement extends ISquare {
     /**
      * Gets the sprite.
      *

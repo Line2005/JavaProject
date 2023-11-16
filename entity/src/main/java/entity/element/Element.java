@@ -3,12 +3,11 @@ package entity.element;
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class Element implements IElement {
+public class Element implements IElement {
     /**
      * <h1>The Element Class.</h1>
      *
-     * @author Laetitia
-     * @version 0.1
+     * @author Tyreel
      */
 
     /**
