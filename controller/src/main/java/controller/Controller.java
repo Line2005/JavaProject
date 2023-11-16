@@ -12,7 +12,7 @@ import entity.element.motionless.MotionlessElementFactory;
 import java.util.Random;
 
 /**
- * The Class Controller by NDIENTIENG LINE SONIA
+ * The Class Controller by Line
  */
 public final class Controller implements IController {
     /**
@@ -170,12 +170,9 @@ public final class Controller implements IController {
             this.getView().displayMessage("Game Over! Do you want to retry?");
         }
     }
-
     /**
-     * KillPlayer when diamonds and Boulders falls on him
+     * winPlayer method
      */
-
-
     public void winPlayer() {
         if ((this.getModel().getMap().getOnTheMapXY((this.getModel().getMyPlayer().getX()), ((this.getModel().getMyPlayer().getY()))).getPermeability() == Permeability.GAMEOVER) && this.getModel().getMyPlayer().getDiamonds() >= diamondGoal) {
             this.hasWon = true;
@@ -192,9 +189,9 @@ public final class Controller implements IController {
         if (this.getModel().getMap().getOnTheMapXY(x, y).getPermeability() == Permeability.MOVABLE &&
                 this.getModel().getMap().getOnTheMapXY(x, y + 1).getPermeability() == Permeability.PENETRABLE) {
             if (x == this.getModel().getMyPlayer().getX() && y + 2 == this.getModel().getMyPlayer().getY()) {
-                // Le rocher est deux cases au-dessus du joueur
+                // The Rock is two case above the player
                 try {
-                    Thread.sleep(1000); // Délai d'une seconde (ajustez selon vos besoins)
+                    Thread.sleep(1000); // Delay before he dies
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -219,6 +216,12 @@ public final class Controller implements IController {
                     if (x + 1 != this.getModel().getMyPlayer().getX() || y != this.getModel().getMyPlayer().getY()) {
                         this.getModel().getMap().setOnTheMapXY(MotionlessElementFactory.createBackground(), x, y);
                         this.getModel().getMap().setOnTheMapXY(MobileElementFactory.createRock(), x + 1, y);
+                        // The Rock is falling diagonally
+                        try {
+                            Thread.sleep(1000); // Delay before he dies
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
@@ -229,6 +232,12 @@ public final class Controller implements IController {
                     if (x - 1 != this.getModel().getMyPlayer().getX() || y != this.getModel().getMyPlayer().getY()) {
                         this.getModel().getMap().setOnTheMapXY(MotionlessElementFactory.createBackground(), x, y);
                         this.getModel().getMap().setOnTheMapXY(MobileElementFactory.createRock(), x - 1, y);
+                        // The Rock is falling diagonally
+                        try {
+                            Thread.sleep(1000); // Delay before he dies
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
@@ -242,9 +251,9 @@ public final class Controller implements IController {
     public void gravityDiamond(int x, int y) {
         if (this.getModel().getMap().getOnTheMapXY(x, y).getPermeability() == Permeability.DIAMOND && this.getModel().getMap().getOnTheMapXY(x, y + 1).getPermeability() == Permeability.PENETRABLE) {
             if (x == this.getModel().getMyPlayer().getX() && y + 2 == this.getModel().getMyPlayer().getY()) {
-                // Le rocher est deux cases au-dessus du joueur
+                // The Diamond is two case above the player
                 try {
-                    Thread.sleep(1000); // Délai d'une seconde (ajustez selon vos besoins)
+                    Thread.sleep(1000); // Delay
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -267,12 +276,24 @@ public final class Controller implements IController {
             if (this.getModel().getMap().getOnTheMapXY(x + 1, y + 1).getPermeability() == Permeability.PENETRABLE && this.getModel().getMap().getOnTheMapXY(x + 1, y).getPermeability() == Permeability.PENETRABLE) {
                 this.getModel().getMap().setOnTheMapXY(MotionlessElementFactory.createBackground(), x, y);
                 this.getModel().getMap().setOnTheMapXY(MobileElementFactory.createDiamond(), x + 1, y);
+                // The Diamond is falling diagonally
+                try {
+                    Thread.sleep(1000); // Delay
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
         if (this.getModel().getMap().getOnTheMapXY(x, y).getPermeability() == Permeability.DIAMOND && this.getModel().getMap().getOnTheMapXY(x, y + 1).getPermeability() == Permeability.DIAMOND) {
             if (this.getModel().getMap().getOnTheMapXY(x - 1, y + 1).getPermeability() == Permeability.PENETRABLE && this.getModel().getMap().getOnTheMapXY(x - 1, y).getPermeability() == Permeability.PENETRABLE) {
                 this.getModel().getMap().setOnTheMapXY(MotionlessElementFactory.createBackground(), x, y);
                 this.getModel().getMap().setOnTheMapXY(MobileElementFactory.createDiamond(), x - 1, y);
+                // The Diamond is falling diagonally
+                try {
+                    Thread.sleep(1000); // Delay
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -299,7 +320,6 @@ public final class Controller implements IController {
     /**
      * Butterfly Move method
      *
-     * @throws InterruptedException
      */
     public void moveRMonster(int x, int y) {
         switch (rdirection) {
@@ -393,7 +413,7 @@ public final class Controller implements IController {
     /**
      * @return this.stackOrder
      */
-    private ControllerOrder getStackOrder() {
+    ControllerOrder getStackOrder() {
         return this.stackOrder;
     }
 
